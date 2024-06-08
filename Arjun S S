@@ -1,0 +1,19 @@
+import java.util.Scanner;
+// code for finding the number of occurences of a particular digit in a number.
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long a = sc.nextLong();
+        int target = sc.nextInt();
+        int count = 0;
+        while(a>0){
+          int lastterm =(int)(a%10);
+          a = a/10;
+          if(lastterm == target){
+              count++;
+          }
+        }
+        System.out.println(count);
+
+    }
+}
