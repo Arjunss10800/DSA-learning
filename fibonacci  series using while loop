@@ -1,0 +1,22 @@
+    import java.util.Scanner;
+    public class CalculatorProgram {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            int n = sc.nextInt();
+            if(n==1){
+                System.out.println(0);
+                return;
+            }
+            int count = 2;
+            int prev = 0;
+            int i = 1;
+            while(n>count){
+                int temp = i+prev;
+                prev = i;
+                i = temp;
+                n--;
+            }
+            System.out.println(i);
+
+        }
+    }
