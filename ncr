@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.*;
+public class Main{
+    public static long Factorial(int f){
+        long fact = 1L;
+        for(int i =0;i<f;i++){
+            fact = fact*(i+1);
+        }
+        return fact;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int r= sc.nextInt();
+        ///
+        long ncr = Factorial(n) /(Factorial(r) * Factorial(n-r));
+        System.out.println(ncr);
+        }
+    }
