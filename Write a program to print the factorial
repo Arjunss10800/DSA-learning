@@ -1,0 +1,36 @@
+/*4! = 1 * 2 * 3 * 4 = 24 
+3! = 3 * 2 * 1 = 6 
+2! = 2 * 1 = 2 
+Also, 
+1! = 1 
+0! = 1 /*
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        Fact(a);
+
+    }
+
+    static void Fact(int a) {
+        System.out.print(a+"! = ");
+        int ans =1;
+        if(a==1 || a==0){
+            System.out.println(ans);
+            return;
+        }
+        for(int i =1; i<=a; i++){
+            if(i==a){
+                System.out.print(i +" ");
+            }else{
+                System.out.print(i +" * ");
+            }
+
+            ans = ans*i;
+        }
+        System.out.println("= "+ans);
+    }
+}
